@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { ReactTyped } from "react-typed";
 import Github from "../../img/facebookorange.png";
@@ -49,7 +49,7 @@ const Intro = () => {
     }
     setIsLoadingMore(true);
     try {
-      const response = await axios.post("http://localhost:5000/generate_more_gift_ideas", formData);
+      const response = await axios.post("http://shlokverma9828.pythonanywhere.com/generate_more_gift_ideas", formData);
       setGiftIdeas([...giftIdeas, ...response.data.gift_ideas]);
       setError("");
     } catch (error) {
