@@ -49,7 +49,7 @@ const Intro = () => {
     }
     setIsLoadingMore(true);
     try {
-      const response = await axios.post("shlokverma9828.pythonanywhere.com/generate_more_gift_ideas", formData);
+      const response = await axios.post("https://shlokverma9828.pythonanywhere.com/generate_more_gift_ideas", formData);
       setGiftIdeas([...giftIdeas, ...response.data.gift_ideas]);
       setError("");
     } catch (error) {
