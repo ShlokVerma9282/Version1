@@ -51,7 +51,7 @@ const GiftForm = ({ onGenerateGiftIdeas, onFormDataChange, initialPrompt }) => {
     console.log("Data being sent:", formData);
 
     try {
-      const response = await axios.post("https://shlokverma9828.pythonanywhere.com/generate_gift_idea", formData);
+      const response = await axios.post("shlokverma9828.pythonanywhere.com/generate_gift_idea", formData);
       onGenerateGiftIdeas(response.data.gift_ideas, "");
     } catch (error) {
       onGenerateGiftIdeas([], "Error generating gift ideas");
